@@ -1058,20 +1058,40 @@ width: 100%;
     padding: 20px;
   }
 
-  /* LEARN CIRCLE BREAK FIX */
-  .learn-content {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+ /* LEARN CIRCLE BREAK FIX (REPLACE THIS SECTION) */
+#learn {
+  min-height: auto;
+  padding: 60px 20px;
+}
 
-  .learn-item {
-    position: relative;
-    width: 100%;
-    transform: none !important;
-  }
+.learn-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: static;
+}
+
+/* 🔥 THIS IS THE KEY FIX */
+.learn-item {
+  position: static !important;
+  width: 100%;
+  transform: none !important;
+}
+
+/* 🔥 KILL ALL CIRCLE POSITIONS */
+.learn-item:nth-child(1),
+.learn-item:nth-child(2),
+.learn-item:nth-child(3),
+.learn-item:nth-child(4) {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+}
 
   /* GRID → SINGLE COLUMN */
   .grid,
