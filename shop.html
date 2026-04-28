@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop | Unicorn specialists</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff8e1;
+      color: #4e342e;
+    }
+
+    header {
+      background: #ffb400;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .shop-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    /* CATEGORY BUTTONS */
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .cat-btn {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      background: #5d4037;
+      color: #ffb400;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .cat-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    .section {
+      display: none;
+      animation: fade 0.4s ease-in-out;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      text-align: center;
+      font-family: 'Lora', serif;
+      margin: 2rem 0 1rem;
+      font-size: 1.6rem;
+      color: #5d4037;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* IMAGE SIZE CONTROL */
+.card img {
+  width: 100%;
+  height: 380px;   /* 👈 increase here */
+  object-fit: cover;
+  display: block;
+}
+
+    /* CONTENT AREA (IMPORTANT FIX) */
+    .card-content {
+      padding: 1rem 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .card h3 {
+      font-family: 'Lora', serif;
+      margin: 0;
+    }
+
+    /* PRICE TAG FIX (NO OVERLAP + CLEAN LOOK) */
+    .price {
+      display: inline-block;
+      background: #5d4037;
+      color: #ffb400;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* BACK BUTTON */
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+      text-decoration: none;
+      color: #fff;
+      background: #5d4037;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🛒 Unicorn Shop</h1>
+  <p>Pure honey & natural beeswax products</p>
+</header>
+
+<div class="shop-container">
+
+  <!-- CATEGORY BUTTONS -->
+  <div class="categories">
+    <button class="cat-btn" onclick="show('honey')">🍯 Honey Products</button>
+    <button class="cat-btn" onclick="show('beeswax')">🕯 Beeswax Products</button>
+  </div>
+
+  <!-- ================= HONEY ================= -->
+<div id="honey" class="section active">
+
+  <h2 class="section-title">🍯 Raw Honey Collection</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/60g.refined.hon.jpg.jpeg">
+      <div class="card-content">
+        <h3>Raw Honey 60g</h3>
+        <div class="price">KSh 80</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/120g.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Raw Honey 120g</h3>
+        <div class="price">KSh 120</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/250g.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Raw Honey 250g</h3>
+        <div class="price">KSh 200</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/300.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Raw Honey 300g</h3>
+        <div class="price">KSh 250</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/500g.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Raw Honey 500g</h3>
+        <div class="price">KSh 350</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/1kg.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Raw Honey 1kg</h3>
+        <div class="price">KSh 650</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/raw-jar.jpg">
+      <div class="card-content">
+        <h3>Raw Honey Premium Jar</h3>
+        <div class="price">KSh 750</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🍯 Processed Honey Collection</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/60g.refined.hon.jpg.jpeg">
+      <div class="card-content">
+        <h3>Processed Honey 60g</h3>
+        <div class="price">KSh 70</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/120g.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Processed Honey 120g</h3>
+        <div class="price">KSh 110</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/250g.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Processed Honey 250g</h3>
+        <div class="price">KSh 180</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/300.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Processed Honey 300g</h3>
+        <div class="price">KSh 230</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/500g.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Processed Honey 500g</h3>
+        <div class="price">KSh 320</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/1kg.refined.jpg.jpeg">
+      <div class="card-content">
+        <h3>Processed Honey 1kg</h3>
+        <div class="price">KSh 600</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/processed-jar.jpg">
+      <div class="card-content">
+        <h3>Processed Honey Jar</h3>
+        <div class="price">KSh 700</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+  <!-- ================= BEESWAX ================= -->
+<div id="beeswax" class="section">
+
+  <h2 class="section-title">🕯 Beeswax Collection</h2>
+
+  <!-- ================= CRUDE ================= -->
+  <h3 class="section-title">🐝 Crude Beeswax</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/wax01.jpg">
+      <div class="card-content">
+        <h3>Crude Beeswax Batch 1</h3>
+        <div class="price">KSh 700/kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/raw2.k.wax.jpg.jpeg">
+      <div class="card-content">
+        <h3>Crude Beeswax Batch 2</h3>
+        <div class="price">KSh 700/kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/raw.k.wax.jpg.jpeg">
+      <div class="card-content">
+        <h3>Crude Beeswax Batch 3</h3>
+        <div class="price">KSh 700/kg</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= PROCESSED ================= -->
+  <h3 class="section-title">✨ Processed Beeswax</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/processed-1kg.jpg">
+      <div class="card-content">
+        <h3>Processed Beeswax Batch 1</h3>
+        <div class="price">KSh 900/kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/processed.k,wax.jpg.jpeg">
+      <div class="card-content">
+        <h3>Processed Beeswax Batch 2</h3>
+        <div class="price">KSh 900/kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/wax02.jpg">
+      <div class="card-content">
+        <h3>Processed Beeswax Batch 3</h3>
+        <div class="price">KSh 900/kg</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+  <a class="back" href="index.html">← Back to Home</a>
+
+</div>
+
+<script>
+  function show(section) {
+    document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+    document.getElementById(section).classList.add("active");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Family Honey Time</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff8e1;
+      color: #4e342e;
+    }
+
+    header {
+      background: #ffb400;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro p {
+      color: #6d4c41;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* ================= FAMILY CARDS ================= */
+    .family-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: #fff3e0;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      font-family: 'Lora', serif;
+      color: #5d4037;
+      margin-bottom: 0.8rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      margin-bottom: 0.4rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: "🍯";
+      position: absolute;
+      left: 0;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.7rem 1.2rem;
+      background: #5d4037;
+      color: #ffb400;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍯 Family Honey Time</h1>
+  <p>Sweet moments shared with nature’s golden gift</p>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    <h2>Our Beautiful Family Moments</h2>
+    <p>Captured memories of love, bees, and honey together.</p>
+  </div>
+
+  <!-- IMAGES -->
+  <div class="gallery">
+  <img src="images/family.honey01.jpg" alt="Family Honey 1">
+  <img src="images/family.honey02.jpg" alt="Family Honey 2">
+  <img src="images/family.honey03.jpg" alt="Family Honey 3">
+
+  <!-- HONEY FOODS ADDED HERE -->
+  <img src="images/honey.food01.jpg" alt="Honey glazed chicken">
+  <img src="images/honey.food02.jpg" alt="Honey drizzled pancakes">
+  <img src="images/honey.food03.jpg" alt="Honey roasted nuts">
+  <img src="images/honey.food04.jpg" alt="Honey tea drink">
+</div>
+
+  <!-- TEXT CARDS (FIXED LOCATION INSIDE BODY) -->
+  <div class="family-cards">
+
+    <div class="card">
+      <h3>Healthy Family Life 🍯</h3>
+      <ul>
+        <li>No frequent sickness</li>
+        <li>Strong natural immunity</li>
+        <li>Daily honey nutrition</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Happy Energy 😊</h3>
+      <ul>
+        <li>Always active and joyful</li>
+        <li>Natural energy from honey</li>
+        <li>No sugar crashes</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Strong Body 💪</h3>
+      <ul>
+        <li>Better digestion health</li>
+        <li>Stronger body resistance</li>
+        <li>Faster recovery from fatigue</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Peaceful Living 🌿</h3>
+      <ul>
+        <li>Less stress and anxiety</li>
+        <li>Natural balanced lifestyle</li>
+        <li>Happy family bonding</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back">← Back to Home</a>
+
+</div>
+
+</body>
+</html>

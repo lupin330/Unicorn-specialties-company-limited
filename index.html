@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unicorn specialists Company Limited</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,600&family=Poppins:wght@400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .dashboard-slider {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      flex-shrink: 0;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 6px;
+    }
+
+    .nav-btn.left { left: 10px; }
+    .nav-btn.right { right: 10px; }
+
+    .nav-btn:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    /* CONTACT */
+    .contact-info {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .contact-info a {
+      color: #5D4037;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= MISSION CIRCLE ================= */
+    .mission-circle {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, #f3e7d3 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      color: #5D4037;
+      line-height: 1.7;
+      z-index: 5;
+    }
+
+    .hero-alt-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    /* ================= NEW TEXT UNDER CIRCLE ================= */
+    .hero-alt-message {
+      width: 100%;
+      margin-top: 20px;
+      font-family: 'Playfair Display', serif;
+      color: #5D4037;
+    }
+
+    .hero-alt-message h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-alt-message p {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* ================= SLOGAN ================= */
+    .slogan {
+      margin-top: 30px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #5D4037;
+      line-height: 1.4;
+    }
+
+    .slogan strong {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .slogan span {
+      display: block;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="nav-container">
+    <div class="logo">Unicorn specialists</div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="honey-products.html">Honey Products</a></li>
+      <li><a href="beeswax-products.html">Beeswax Products</a></li>
+      <li><a href="honey-benefits.html">Benefits of Honey </a></li>
+      <li><a href="#learn">Learn</a></li>
+      <li><a href="#sustainability">Sustainability</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+
+<div class="dashboard-slider">
+
+  <button class="nav-btn left">&#10094;</button>
+
+  <div class="slides">
+
+    <!-- HERO -->
+    <section id="home" class="hero slide visible hero-bg-1">
+      <img src="images/logo.original.final.jpg-removebg-preview-removebg-preview.png" alt="Company Logo" class="company-logo">
+      <div class="hero-content">
+        <h1>Pure Honey & Natural Beeswax</h1>
+        <p>Ethically harvested. Sustainably produced. Trusted quality.</p>
+<div style="margin-top:15px;">
+  <a href="honey-products.html" class="btn-primary">Explore Products</a>
+
+  <a href="family-honey.html" class="btn-primary" style="margin-left:10px;">
+    Family Honey Times
+  </a>
+
+  <a href="shop.html" class="btn-primary" style="margin-left:10px;">
+    Shop with Unicorn specialists
+  </a>
+</div>
+
+        <div class="slogan">
+          <strong>Unicorn specialists Company Limited</strong>
+          <span>“We care for bees, not exploitation.”</span>
+          Pure nature. Honest harvest. Sustainable future.
+        </div>
+      </div>
+ </section> <!-- ✅ THIS WAS MISSING -->
+
+  <!-- DASHBOARD 2 -->
+<section class="hero-alt slide hero-bg-2">
+
+  <!-- ✅ LOGO ADDED -->
+  <img src="images/logo.original.final.jpg-removebg-preview-removebg-preview.png" 
+       alt="Company Logo" 
+       class="company-logo">
+
+  <div class="hero-alt-container">
+
+    <div class="mission-circle">
+      <div>
+        <strong>You Order, We Deliver</strong><br><br>
+        Get pure, natural honey and beeswax while promoting sustainability,
+        environmental care, and community growth.
+      </div>
+    </div>
+
+    <!-- NEW TEXT -->
+    <div class="hero-alt-message">
+      <h2>Pure from the Hive, Crafted by Nature</h2>
+      <p>
+        Experience the richness of golden honey and the versatility of natural beeswax,
+        harvested with care and delivered in its purest form. From hive to home,
+        we bring you nature’s finest treasures.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DASHBOARD 3 -->
+<section class="hero-alt slide hero-bg-3">
+
+  <!-- ✅ LOGO ADDED -->
+  <img src="images/logo.original.final.jpg-removebg-preview-removebg-preview.png" 
+       alt="Company Logo" 
+       class="company-logo">
+
+  <div class="hero-alt-container">
+
+    <div class="mission-circle">
+      <div>
+        <strong>Unicorn Specialities...</strong><br><br>
+        We are a leading natural hive products brand recognized for purity,
+        innovation, and sustainability.
+      </div>
+    </div>
+
+    <!-- NEW TEXT -->
+    <div class="hero-alt-message">
+      <h2>Pure from the Hive, Crafted by Nature</h2>
+      <p>
+        At Unicorn specialistss, every drop of golden honey and every touch of beeswax
+        reflects the dedication of busy bees—carefully transformed into products
+        you can trust and love.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</div>
+
+<button class="nav-btn right">&#10095;</button>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products" class="section visible">
+  <h2>Our Products</h2>
+  <div class="grid">
+    <a href="honey-products.html">
+      <div class="card">
+        <h3>Honey Products</h3>
+        <p>Pure natural honey from our apiaries.</p>
+      </div>
+    </a>
+
+    <a href="beeswax-products.html">
+      <div class="card">
+        <h3>Beeswax Products</h3>
+        <p>Candles, cosmetics, and pure beeswax.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+</section>
+
+
+  <!-- ================= ORDER NOW ================= -->
+<section id="order" class="section visible order-section">
+  <h2>🛒 Order Your Honey & Beeswax</h2>
+
+  <div class="order-container">
+
+    <!-- PRODUCT LIST -->
+    <div class="order-box">
+      <h3>📦 Available Products</h3>
+
+      <div class="product-list">
+
+  <!-- 🍯 RAW HONEY -->
+  <div class="product">
+    <span>Raw Honey 250ml</span>
+    <span>KSh 200</span>
+  </div>
+
+  <div class="product">
+    <span>Raw Honey 500ml</span>
+    <span>KSh 350</span>
+  </div>
+
+  <div class="product">
+    <span>Raw Honey 1 Litre</span>
+    <span>KSh 650</span>
+  </div>
+
+  <div class="product">
+    <span>Raw Honey Premium Jar</span>
+    <span>KSh 750</span>
+  </div>
+
+  <!-- 🍯 PROCESSED HONEY -->
+  <div class="product">
+    <span>Processed Honey 250ml</span>
+    <span>KSh 180</span>
+  </div>
+
+  <div class="product">
+    <span>Processed Honey 500ml</span>
+    <span>KSh 320</span>
+  </div>
+
+  <div class="product">
+    <span>Processed Honey 1 Litre</span>
+    <span>KSh 600</span>
+  </div>
+
+  <div class="product">
+    <span>Processed Honey Jar</span>
+    <span>KSh 700</span>
+  </div>
+
+  <!-- 🕯 BEESWAX -->
+  <div class="product">
+    <span>Crude Beeswax 1kg</span>
+    <span>KSh 700</span>
+  </div>
+
+  <div class="product">
+    <span>Processed Beeswax 1kg</span>
+    <span>KSh 900</span>
+  </div>
+
+  <div class="product">
+    <span>White Bleached Beeswax 1kg</span>
+    <span>KSh 1100</span>
+  </div>
+
+</div>
+
+    <!-- ORDER FORM -->
+    <div class="order-box">
+      <h3>🧾 Place Order</h3>
+
+      <form class="order-form">
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+       <select required>
+  <option value="">Select Product</option>
+
+  <!-- 🍯 RAW HONEY -->
+  <option>Raw Honey 250ml</option>
+  <option>Raw Honey 500ml</option>
+  <option>Raw Honey 1 Litre</option>
+  <option>Raw Honey Premium Jar</option>
+
+  <!-- 🍯 PROCESSED HONEY -->
+  <option>Processed Honey 250ml</option>
+  <option>Processed Honey 500ml</option>
+  <option>Processed Honey 1 Litre</option>
+  <option>Processed Honey Jar</option>
+
+  <!-- 🕯 BEESWAX -->
+  <option>Crude Beeswax 1kg</option>
+  <option>Processed Beeswax 1kg</option>
+  <option>White Bleached Beeswax 1kg</option>
+
+</select>
+
+        <input type="number" placeholder="Quantity" required>
+
+        <textarea placeholder="Delivery Location"></textarea>
+
+        <select required>
+          <option value="">Payment Method</option>
+          <option>M-Pesa</option>
+          <option>Cash on Delivery</option>
+          <option>Bank Transfer</option>
+        </select>
+
+        <button type="submit">Order Now 🍯</button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= LEARN ================= -->
+<section id="learn" class="section visible learn-clean">
+  <h2>Learn About Honey, Bees & Beeswax 🐝</h2>
+
+  <div class="learn-content">
+
+    <div class="learn-item">
+      <h3>🍯 Why Natural Honey?</h3>
+      <p>
+        Pure honey is packed with antioxidants, antibacterial properties,
+        and natural energy. Unlike processed sugar, it supports your health
+        while adding rich flavor to your meals.
+      </p>
+    </div>
+
+    <div class="learn-item">
+      <h3>🐝 How Bees Make Honey</h3>
+      <p>
+        Bees collect nectar from flowers, transform it through natural enzymes,
+        and store it in honeycombs to create the golden honey we enjoy.
+      </p>
+    </div>
+
+    <div class="learn-item">
+      <h3>🌼 Importance of Pollination</h3>
+      <p>
+        Bees play a vital role in agriculture by pollinating crops,
+        helping plants grow and sustaining food production worldwide.
+      </p>
+    </div>
+
+    <div class="learn-item">
+      <h3>🕯 Uses of Beeswax</h3>
+      <p>
+        Beeswax is used in candles, skincare, and cosmetics.
+        It is natural, eco-friendly, and free from harmful chemicals.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- ================= SUSTAINABILITY ================= -->
+<section id="sustainability" class="section visible sustainability-section">
+  <h2>Sustainability 🌱</h2>
+
+  <div class="sustainability-intro">
+    <p>
+      At Unicorn specialists Company Limited, sustainability is not a slogan — it is how we operate every single day.
+      From hive management to harvesting and packaging, every step is designed to protect bees, people, and the environment.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🌿 Ethical Beekeeping</h3>
+      <p>
+        We never over-harvest. Bees are always left with enough honey for survival and colony strength.
+        Healthy bees = healthy ecosystems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🐝 Bee Protection First</h3>
+      <p>
+        Our harvesting methods are designed to minimize disturbance.
+        We avoid harmful chemicals and prioritize natural hive balance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Environmental Care</h3>
+      <p>
+        We support flowering ecosystems by encouraging planting of bee-friendly crops and protecting natural habitats.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>👨‍🌾 Community Empowerment</h3>
+      <p>
+        We train local farmers in modern beekeeping, creating income while preserving nature.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>♻️ Zero Waste Approach</h3>
+      <p>
+        Every product from the hive is used — honey, wax, propolis — nothing is wasted.
+        Even by-products are repurposed.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌼 Pollination Impact</h3>
+      <p>
+        Our bees support agriculture by improving crop yields through natural pollination across local farms.
+      </p>
+    </div>
+
+        <div class="card">
+      <h3>🌳 Reforestation Support</h3>
+      <p>
+        We actively support tree planting initiatives that restore bee habitats and improve biodiversity in rural ecosystems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💧 Clean Production Practices</h3>
+      <p>
+        All honey extraction and processing is done using clean, food-safe methods without industrial additives or contamination risks.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📦 Eco-Friendly Packaging</h3>
+      <p>
+        We prioritize recyclable and biodegradable packaging materials to reduce plastic waste and environmental impact.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📊 Sustainable Growth Monitoring</h3>
+      <p>
+        We track hive health and production cycles to ensure long-term sustainability rather than short-term overproduction.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= NECTAR COLLECTION ================= -->
+<section class="video-section">
+  <h2>Bees Collecting Nectar 🌸🐝</h2>
+
+  <div class="video-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <div style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe 
+          src="https://www.youtube.com/embed/mR_akVQLqKA"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>Flower Gathering</h3>
+      <p>Bees collect nectar from blooming flowers in nature.</p>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-card">
+      <div style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe 
+          src="https://www.youtube.com/embed/B1FQhlPildQ"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>Pollination Process</h3>
+      <p>Helping plants grow while gathering pure nectar.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="bee-farm-section">
+
+  <div class="bee-farm-images">
+    <img src="images/Beefarm2.jpg" alt="Bee Farm 1">
+    <img src="images/Beefarm3.jpg" alt="Bee Farm 2">
+  </div>
+
+  <div class="bee-farm-text">
+    <h2>Bee Farm Overview 🐝🌼</h2>
+    <p>
+      A thriving bee farm full of flowers and active colonies producing pure honey.
+    </p>
+  </div>
+
+</section>
+
+<!-- ================= HIVE ACTIVITY ================= -->
+<section class="video-section">
+  <h2>Bees Inside the Hive 🏠🐝</h2>
+
+  <div class="video-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <div style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe 
+          src="https://www.youtube.com/embed/_L0AxQlBZ84"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h3>Hive Activity</h3>
+      <p>Worker bees building and maintaining the hive structure.</p>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-card">
+      <div style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe 
+          src="https://www.youtube.com/embed/SHnEeGU68D0"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h3>Honeycomb Formation</h3>
+      <p>Perfect hexagons storing fresh honey and pollen.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= HARVESTING ================= -->
+<section class="video-section">
+  <h2>Honey Harvesting 🍯</h2>
+
+  <div class="video-grid">
+
+    <!-- VIDEO 3 -->
+    <div class="video-card">
+      <div style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe 
+          src="https://www.youtube.com/embed/fhpnazD5P5g"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h3>Careful Extraction</h3>
+      <p>Honey is gently extracted without harming the bees.</p>
+    </div>
+
+    <!-- VIDEO 4 -->
+    <div class="video-card">
+      <div style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe 
+          src="https://www.youtube.com/embed/Gj4VupBzuwU"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <h3>Pure Honey Frames</h3>
+      <p>Fresh honeycomb frames ready for collection.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="about" class="section about-modern visible">
+
+  <!-- 🔥 BIG INTRO -->
+  <div class="about-hero">
+    <h2>About Us</h2>
+    <p>
+      At <strong>Unicorn specialists Company Limited</strong>, we don’t just produce honey —
+      we protect nature, empower farmers, and deliver purity you can trust.
+    </p>
+  </div>
+
+  <!-- 🔥 STORY + MAP SPLIT -->
+  <div class="about-split">
+
+    <div class="about-text">
+      <h3>🐝 Our Story</h3>
+      <p>
+        We started to fight the rise of fake and adulterated honey in the market.
+        At Unicorn Specialities is simple: deliver real, traceable, and natural hive products
+        while supporting local beekeepers across Kenya.
+      </p>
+
+      <h3>⚙️ Challenges</h3>
+      <p>
+        Climate change, hive health, and seasonal shifts affect production.
+        We overcome this through sustainable practices, careful monitoring,
+        and continuous farmer training.
+      </p>
+    </div>
+
+    <div class="about-map">
+      <iframe
+        src="https://www.google.com/maps?q=Kenya&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+  <!-- 🔥 CARDS -->
+  <div class="about-cards">
+
+    <div class="about-card">
+      <h3>📈 Milestones</h3>
+      <ul>
+        <li>✔ First apiary established</li>
+        <li>✔ Expanded production</li>
+        <li>✔ Beeswax product line launched</li>
+        <li>✔ Strong farmer partnerships</li>
+      </ul>
+    </div>
+
+    <div class="about-card highlight">
+      <h3>🚀 Our Prospects</h3>
+      <p>
+        To become a leading East African hive products brand,
+        known for purity, innovation, and sustainability.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section light visible">
+  <h2>Contact Us</h2>
+
+  <div class="contact-info">
+    <p>📞 Phone: <a href="tel:+254745057570">+254 745 057 570</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/254745057570" target="_blank">Chat on WhatsApp</a></p>
+    <p>📧 Email 1: <a href="mailto:kylxy08@gmail.com">kylxy08@gmail.com</a></p>
+    <p>📧 Email 2: <a href="mailto:sam.mburu.0008@gmail.com">sam.mburu.0008@gmail.com</a></p>
+  </div>
+
+ <form class="contact-form" action="https://formsubmit.co/kylxy08@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://google.com">
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Unicorn specialists Company Limited. All rights reserved.</p>
+</footer>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+  const slideContainer = document.querySelector(".slides");
+
+  document.querySelector(".right").addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlide();
+  });
+
+  document.querySelector(".left").addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+
+  function updateSlide() {
+    slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+</script>
+
+</body>
+</html>

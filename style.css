@@ -1,0 +1,1187 @@
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🔥 FIX: kills sideways scroll */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #FFB400;
+  z-index: 1000;
+}
+
+.nav-container {
+width: 100%;
+  padding: 0 20px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #5D4037;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.nav-cta {
+  background: #5D4037;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+/* ================= SLIDER ================= */
+.dashboard-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+
+.nav-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  background: none; /* remove old image */
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  min-height: 100vh; /* important for full screen */
+}
+
+.hero h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #5D4037;
+  color: #FFB400;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+
+/* ================= SECTIONS ================= */
+.section {
+  width: 100%;
+  padding: 80px 20px;
+  padding: 4rem 2rem;
+}
+
+.section.light {
+  background: #FFF3E0;
+}
+
+.section h2 {
+  font-family: 'Lora', serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.center-text {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.6rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* 👇 ADD YOUR VIDEO SECTION HERE */
+.video-section {
+  padding: 60px 20px;
+  background: #fff8e1;
+}
+
+.video-section h2 {
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #4e342e;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.video-card {
+  background: #fff3e0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.video-card video {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.video-card h3 {
+  font-family: 'Lora', serif;
+  margin-top: 10px;
+  color: #5d4037;
+}
+
+.video-card p {
+  padding: 0 15px 15px;
+  color: #6d4c41;
+}
+
+
+/* ================= CONTACT ================= */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #5D4037;
+  color: #FFB400;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #5D4037;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* ================= SECOND HERO ================= */
+.hero-alt {
+  width: 100%;
+  padding: 5rem 2rem;
+  background: #FFF3E0;
+}
+
+/* IMPORTANT: container becomes positioning reference */
+.hero-bg-2 .hero-alt-container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 80vh;
+  padding: 40px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Stack container (circle + text together) */
+.hero-bg-2 .mission-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 320px;
+}
+
+/* Circle stays normal (no absolute) */
+.hero-bg-2 .mission-circle {
+  position: relative;
+}
+
+/* Text now sits UNDER circle */
+.hero-bg-2 .hero-alt-message {
+  text-align: center;
+  width: 100%;
+}
+/* TEXT STYLING (optional but clean) */
+.hero-alt-text h2 {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-alt-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* IMAGE (if used elsewhere) */
+.hero-alt-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+
+
+  .hero-alt-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-btn {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* ================= SCROLL REVEAL FIX ================= */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= THIRD DASHBOARD ENHANCEMENT ================= */
+.slide:nth-child(3) .hero-alt {
+  background: linear-gradient(to right, #FFF3E0, #FFE0B2);
+}
+
+.slide:nth-child(3) .hero-alt-image img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.slide:nth-child(3) .hero-alt-image img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.slide:nth-child(3) .hero-alt-text h2 {
+  color: #5D4037;
+  letter-spacing: 0.5px;
+}
+
+.slide:nth-child(3) .hero-alt-text p {
+  font-weight: 500;
+  color: #4E342E;
+}
+
+.slide {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+
+
+/* ================= FIX BUTTON CLICKABILITY ================= */
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-content a {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* ================= FAMILY TEXT CARDS ================= */
+.family-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.family-cards .card {
+  background: #fff3e0;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.family-cards .card:hover {
+  transform: translateY(-6px);
+}
+
+.family-cards h3 {
+  color: #5d4037;
+  margin-bottom: 0.8rem;
+  font-family: 'Lora', serif;
+}
+
+.family-cards ul {
+  list-style: none;
+  padding: 0;
+}
+
+.family-cards ul li {
+  margin-bottom: 0.4rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.family-cards ul li::before {
+  content: "🍯";
+  position: absolute;
+  left: 0;
+}
+/* ================= FIX CONTACT FORM ================= */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #5D4037;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background: #3e2723;
+}
+
+.bee-farm-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* IMAGE ROW */
+.bee-farm-images {
+  display: flex;
+  width: 100%;
+  height: 70vh; /* same height for both */
+}
+
+/* EACH IMAGE */
+.bee-farm-images img {
+  flex: 1;              /* makes both equal width */
+  width: 50%;
+  height: 100%;
+  object-fit: cover;    /* fills without distortion */
+  display: block;
+}
+
+/* TEXT BELOW */
+.bee-farm-text {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff8e1;
+}
+
+.bee-farm-text h2 {
+  font-family: 'Lora', serif;
+  color: #5d4037;
+}
+
+.bee-farm-text p {
+  color: #6d4c41;
+  font-size: 1.1rem;
+}
+
+
+/* ================= ALL DASHBOARD IMAGES DESIGN SYSTEM ================= */
+.hero-alt-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  border: 4px solid rgba(255,255,255,0.6);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ================= HOVER EFFECT ================= */
+.hero-alt-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.3);
+}
+
+/* ================= DASHBOARD 2 & 3 STRUCTURE FIX ================= */
+.hero-alt-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 2rem;
+
+  align-items: center;
+  text-align: center;
+}
+
+/* ================= PREMIUM BACKGROUND FEEL ================= */
+.hero,
+.hero-alt {
+  position: relative;
+}
+
+.hero-alt {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+}
+
+
+
+/* ================= BACKGROUND SLIDER OVERRIDE ================= */
+
+/* HERO stays centered */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* HERO-ALT must NOT force centering (this was your bug) */
+.hero-alt {
+  position: relative;
+  min-height: 85vh;
+  display: block; /* ❗ critical fix */
+  text-align: initial;
+  color: white;
+}
+
+/* DARK OVERLAY */
+.hero::before,
+.hero-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* KEEP CONTENT ABOVE */
+.hero-content,
+.hero-alt-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* BACKGROUND IMAGES */
+.hero-bg-1,
+.hero-bg-2,
+.hero-bg-3 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #FFF3E0;
+}
+
+/* 1st → RIGHT EDGE */
+.hero-bg-1 {
+  background-image: url('images/hunnie.jpg');
+  background-position: right center;
+}
+
+/* 2nd → LEFT EDGE */
+.hero-bg-2 {
+  background-image: url('images/wax.001.jpg');
+  background-position: left center;
+  color: #FF6F00EE; /* deep amber */
+}
+
+.hero-bg-2 .hero-alt-text h2,
+.hero-bg-2 .hero-alt-text p {
+  color: #FF6F00EE !important;
+}
+
+/* 3rd → RIGHT EDGE */
+.hero-bg-3 {
+  background-image: url('images/nice.jpg');
+  background-position: right center;
+}
+
+
+/* ================= HERO LOGO ================= */
+.hero {
+  position: relative;
+}
+
+/* LOGO (ALL DASHBOARDS) */
+.company-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 90px;
+  height: auto;
+
+  z-index: 50;
+
+  /* no frame */
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* ================= SECTION BACKGROUNDS ================= */
+
+#learn {
+  background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+              url('images/learn-bg.jpg') center/cover no-repeat;
+}
+#sustainability {
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+              url('images/sustainability-bg.jpg') center/cover no-repeat;
+}
+
+#about {
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+              url('images/about-bg.jpg') center/cover no-repeat;
+}
+
+/* optional spacing boost */
+.section {
+  padding: 80px 20px;#sustainability {
+  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+}
+}
+
+
+/* ================= LEARN SECTION (CIRCULAR STYLE) ================= */
+
+#learn {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 20px;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* container becomes circle space */
+.learn-content {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+/* center title */
+#learn h2 {
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+/* each item floats */
+.learn-item {
+  position: absolute;
+  width: 220px;
+  text-align: center;
+
+  color: #4E342E;
+  font-family: 'Lora', serif;
+}
+
+/* POSITION THEM IN A CIRCLE */
+
+/* top */
+.learn-item:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* right */
+.learn-item:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* bottom */
+.learn-item:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* left */
+.learn-item:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* subtle hover life */
+.learn-item:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+
+#sustainability .card {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+/* add delay so they don’t move together */
+#sustainability .card:nth-child(2) { animation-delay: 0.5s; }
+#sustainability .card:nth-child(3) { animation-delay: 1s; }
+#sustainability .card:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes floatCard {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+#sustainability .card {
+  transition: all 0.3s ease;
+}
+
+#sustainability .card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  background: #fff8e1;
+}
+
+/* SHOP CARD FIX — CLEAN & ISOLATED */
+.shop-container .card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* 🔥 remove old padding completely */
+}
+
+/* IMAGE — increase height here */
+.shop-container .card img {
+  width: 100%;
+  height: 320px;   /* 👈 increase more (try 320–350px) */
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENT BELOW IMAGE */
+.shop-container .card-content {
+  padding: 15px;
+  background: white;
+  text-align: center;
+}
+
+/* TITLE */
+.shop-container .card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+/* PRICE */
+.shop-container .card .price {
+  display: inline-block;
+  background: #5d4037;
+  color: #ffb400;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.order-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.order-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.order-form button {
+  background: #5d4037;
+  color: #ffb400;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.order-form button:hover {
+  transform: scale(1.03);
+}
+
+/* ================= MODERN ABOUT ================= */
+
+.about-modern {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HERO */
+.about-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.15rem;
+  color: #5d4037;
+}
+
+/* SPLIT */
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.about-text h3 {
+  margin-bottom: 10px;
+  color: #5d4037;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+/* MAP */
+.about-map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* CARDS */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.about-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* 🔥 Highlight Vision */
+.about-card.highlight {
+  background: linear-gradient(135deg, #ffecb3, #ffe082);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.hero-bg-2 {
+ color: #ff6f00ee;
+}
+
+
+
+
+
+/* ================= FULL MOBILE OVERHAUL ================= */
+@media (max-width: 768px) {
+
+  /* GLOBAL */
+  body {
+    font-size: 14px;
+  }
+
+  /* NAVIGATION */
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* SLIDER FIX */
+  .slide {
+    width: 100%;
+  }
+
+  .dashboard-slider {
+    overflow-x: hidden;
+  }
+
+  /* HERO TEXT */
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
+  }
+
+  /* LOGO */
+  .company-logo {
+    width: 60px;
+    top: 10px;
+    left: 10px;
+  }
+
+  /* 🔥 DASHBOARD HEIGHT FIX */
+  .hero,
+  .hero-alt,
+  .slide {
+    min-height: 120vh;
+  }
+
+  /* 🔥 DASHBOARD 1 TEXT SAFETY (NEW FIX ADDED) */
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+  /* HERO ALT STACK FIX */
+  .hero-alt-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mission-circle {
+    width: 260px;
+    height: 260px;
+    font-size: 0.95rem;
+    padding: 20px;
+  }
+
+  /* LEARN CIRCLE BREAK FIX */
+  .learn-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .learn-item {
+    position: relative;
+    width: 100%;
+    transform: none !important;
+  }
+
+  /* GRID → SINGLE COLUMN */
+  .grid,
+  .family-cards,
+  .about-cards,
+  .order-container,
+  .video-grid {
+    grid-template-columns: 1fr !important;
+    display: grid;
+  }
+
+  /* VIDEO FIX */
+  .video-card video {
+    height: 250px;
+  }
+
+  /* BEE FARM */
+  .bee-farm-images {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .bee-farm-images img {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* ABOUT SECTION */
+  .about-split {
+    grid-template-columns: 1fr;
+  }
+
+  /* BUTTON SIZE */
+  .btn-primary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* ORDER FORM */
+  .order-box {
+    width: 100%;
+  }
+
+}
+
+/* ================= SECOND MOBILE BLOCK ================= */
+@media (max-width: 768px) {
+
+  /* RESET OVERLAP ISSUES */
+  .hero-alt-container * {
+    position: relative !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+
+  /* STACK DASHBOARDS */
+  .hero-alt-container {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* FIX CONTENT BOXES */
+  .mission-circle,
+  .vision-circle,
+  .mission-stack {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* TEXT CENTER */
+  .hero-alt-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* IMAGE FIX */
+  .hero-alt-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* REMOVE OVERFLOW HEIGHT ISSUES */
+  .hero-alt {
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+
+}
+
+/* CLEAN RESET FOR CIRCLES */
+.mission-circle {
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  display: block !important;
+  padding: 0 !important;
+  text-align: center;
+}
+
+
+
+
