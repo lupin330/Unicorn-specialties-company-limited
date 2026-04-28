@@ -31,7 +31,6 @@ width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; /* ✅ ADD THIS */
 }
 
 .logo {
@@ -1215,55 +1214,4 @@ width: 100%;
 
 
 
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 70px;
-  right: 15px;
-  background: white;
-  min-width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  z-index: 999;
-  overflow: hidden;
-}
 
-.mobile-menu a {
-  display: block;
-  padding: 12px 15px;
-  text-decoration: none;
-  color: #5D4037;
-  font-weight: 600;
-}
-
-.mobile-menu a:hover {
-  background: #f3e7d3;
-}
-
-
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 18px;
-  }
-
-  .nav-links {
-    display: none; /* hide full menu on phone */
-  }
-
-  .nav-container {
-    position: relative;
-  }
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-}
-
-.mobile-menu.show {
-  display: block;
-}

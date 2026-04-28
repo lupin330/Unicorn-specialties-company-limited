@@ -145,33 +145,18 @@
 
 <header class="site-header">
   <nav class="nav-container">
-
     <div class="logo">Unicorn specialists</div>
 
-    <!-- ✅ HAMBURGER -->
-    <div class="menu-toggle" id="menu-toggle">
-      ☰
-    </div>
-
-    <!-- ✅ DROPDOWN MENU -->
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="honey-products.html">Explore Products</a>
-      <a href="family-honey.html">Family Honey Times</a>
-      <a href="shop.html">Shop with Unicorn specialists</a>
-    </div>
-
-    <!-- ✅ NORMAL NAV -->
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="honey-products.html">Honey Products</a></li>
       <li><a href="beeswax-products.html">Beeswax Products</a></li>
-      <li><a href="honey-benefits.html">Benefits of Honey</a></li>
+      <li><a href="honey-benefits.html">Benefits of Honey </a></li>
       <li><a href="#learn">Learn</a></li>
       <li><a href="#sustainability">Sustainability</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
-
   </nav>
 </header>
 
@@ -564,8 +549,8 @@
 
     <!-- VIDEO 1 -->
     <div class="video-card">
-      <video controls muted playsinline class="bee-video">
-        <source src="https://res.cloudinary.com/djdabeuvj/video/upload/v1777404419/Nec1_zeaed2.mp4" type="video/mp4">
+      <video controls style="width:100%; border-radius:10px;">
+        <source src="images/Nec1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
@@ -573,10 +558,10 @@
       <p>Bees collect nectar from blooming flowers in nature.</p>
     </div>
 
-    <!-- VIDEO 2 -->
+    <!-- VIDEO 2 (PLACEHOLDER) -->
     <div class="video-card">
-      <video controls muted playsinline class="bee-video">
-        <source src="https://res.cloudinary.com/djdabeuvj/video/upload/v1777404522/nec2_vb2bpp.mp4" type="video/mp4">
+      <video controls style="width:100%; border-radius:10px;">
+        <source src="images/Nec2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
 
@@ -586,6 +571,7 @@
 
   </div>
 </section>
+
 
 <!-- ================= BEE FARM ================= -->
 <section class="bee-farm-section">
@@ -744,7 +730,7 @@
     <p>📧 Email 2: <a href="mailto:sam.mburu.0008@gmail.com">sam.mburu.0008@gmail.com</a></p>
   </div>
 
- <form id="contact-form" class="contact-form" action="https://formsubmit.co/kylxy08@gmail.com" method="POST">
+ <form class="contact-form" action="https://formsubmit.co/kylxy08@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="https://google.com">
 
@@ -759,5 +745,26 @@
 <footer class="footer">
   <p>© 2026 Unicorn specialists Company Limited. All rights reserved.</p>
 </footer>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+  const slideContainer = document.querySelector(".slides");
+
+  document.querySelector(".right").addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlide();
+  });
+
+  document.querySelector(".left").addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+
+  function updateSlide() {
+    slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+</script>
+
 </body>
 </html>
