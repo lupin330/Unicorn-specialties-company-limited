@@ -1261,6 +1261,7 @@ width: 100%;
 
 .mobile-menu {
   display: none;
+  flex-direction: column;
 }
 
 .mobile-menu.show {
