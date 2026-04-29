@@ -1233,3 +1233,10 @@ width: 100%;
   background-image: none !important;
   background-color: #FFF3E0;
 }
+
+
+/* ================= FORCE HERO ALT TEXT WHITE ================= */
+.hero-alt-message,
+.hero-alt-message * {
+  color: #ffffff !important;
+}
